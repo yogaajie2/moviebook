@@ -64,6 +64,6 @@
   }
 
   h1 {
-    @apply font-heading font-bold leading-snug text-3xl md:leading-snug md:text-4xl lg:leading-snug lg:text-5xl lg:w-5/6 2xl:w-7/12;
+    @apply font-heading text-xl md:text-2xl lg:text-3xl;
   }
 }
