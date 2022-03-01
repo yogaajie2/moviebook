@@ -66,4 +66,8 @@
   h1 {
     @apply font-heading text-xl md:text-2xl lg:text-3xl;
   }
+
+  h2 {
+    @apply font-heading font-bold text-xl md:text-2xl lg:text-3xl;
+  }
 }
