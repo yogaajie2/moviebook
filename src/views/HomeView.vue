@@ -35,7 +35,7 @@ function getYear(date) {
                 class="rounded-lg"
               >
   
-              <p class="absolute flex items-center -right-2 top-2 px-2 py-1 rounded font-bold text-sm bg-primary-light gap-1">
+              <p class="absolute flex items-center -right-2 top-2 px-2 py-1 rounded font-bold text-sm bg-primary-light gap-1 shadow">
                 <font-awesome-icon
                   icon="star"
                   size="sm"
