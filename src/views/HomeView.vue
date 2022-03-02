@@ -16,6 +16,7 @@ onMounted(async () => {
 
     // Upcoming
     // .get('https://api.themoviedb.org/3/movie/upcoming?api_key=70d100dc02aa86f434714200877bff47&language=en-US&page=1&region=ID')
+    
     .then(response => {
       movies.value = response.data;
     });
