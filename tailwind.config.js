@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   content: [
     "./index.html",
@@ -36,6 +37,7 @@ module.exports = {
   },
 
   plugins: [
+    // eslint-disable-next-line no-undef
     require('tailwind-scrollbar'),
   ],
 };
