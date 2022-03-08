@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  title: {
+  item: {
     type: Object,
     required: true,
   },
@@ -11,11 +11,11 @@ function getYear(date) {
 }
 </script>
 
-<template lang="">
+<template>
   <div class="basis-2/5 shrink-0 space-y-2 md:basis-1/4 xl:basis-1/6">
     <div class="relative">
       <img
-        :src="`https://image.tmdb.org/t/p/w300/${title.poster_path}`"
+        :src="`https://image.tmdb.org/t/p/w300/${item.poster_path}`"
         class="rounded-lg"
       >
   
@@ -26,17 +26,17 @@ function getYear(date) {
           class="text-tertiary"
         />
   
-        {{ title.vote_average }}
+        {{ item.vote_average }}
       </p>
     </div>
   
     <div>
       <p class="font-bold">
-        {{ title.title }}
+        {{ item.title }}
       </p>
   
       <p class="text-sm">
-        {{ getYear(title.release_date) }}
+        {{ getYear(item.release_date) }}
       </p>
     </div>
   </div>
