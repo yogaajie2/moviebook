@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import './header.css';
+// import './header.css';
 import MyButton from './Button.vue';
 
 export default {
