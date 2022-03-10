@@ -16,7 +16,7 @@ function getYear(date) {
     <div class="relative">
       <img
         :src="`https://image.tmdb.org/t/p/w300/${item.poster_path}`"
-        class="rounded-lg"
+        class="rounded-lg aspect-[2/3]"
       >
   
       <p class="absolute flex items-center -right-2 top-2 px-2 py-1 rounded font-bold text-sm bg-primary-light gap-1 shadow">
