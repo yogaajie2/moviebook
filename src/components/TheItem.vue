@@ -6,6 +6,10 @@ defineProps({
   },
 });
 
+function convertToDecimal(rating) {
+  return Number.isInteger(rating) ? rating + ".0" : rating;
+}
+
 function getYear(date) {
   return date.slice(0, 4);
 }
@@ -26,7 +30,7 @@ function getYear(date) {
           class="text-tertiary"
         />
   
-        {{ item.vote_average }}
+        {{ item.vote_average === 0 ? "NR" : convertToDecimal(item.vote_average) }}
       </p>
     </div>
   
