@@ -19,6 +19,10 @@ function convertToDecimal(rating) {
   return Number.isInteger(rating) ? rating + ".0" : rating;
 }
 
+function findGenre(genreId) {
+  return genres.value.find(genre => genre.id === genreId).name;
+}
+
 function formatDate(releaseDate) {
   const date = new Date(releaseDate);
 
