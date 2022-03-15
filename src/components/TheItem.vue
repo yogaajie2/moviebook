@@ -19,8 +19,15 @@ function convertToDecimal(rating) {
   return Number.isInteger(rating) ? rating + ".0" : rating;
 }
 
-function getYear(date) {
-  return date.slice(0, 4);
+function formatDate(releaseDate) {
+  const date = new Date(releaseDate);
+
+  const options = {
+    month: 'long',
+    day: 'numeric'
+  };
+
+  return date.toLocaleDateString('en-US', options);
 }
 </script>
 
