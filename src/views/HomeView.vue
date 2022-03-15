@@ -10,24 +10,28 @@ const lists = [
     id: 1,
     name: 'Now Playing',
     items: ref({}),
+    info: 'genre',
   },
 
   {
     id: 2,
     name: 'Popular',
     items: ref({}),
+    info: 'genre',
   },
 
   {
     id: 3,
     name: 'Upcoming',
     items: ref({}),
+    info: 'release_date'
   },
 
   {
     id: 4,
     name: 'Top Rated',
     items: ref({}),
+    info: 'vote_count'
   },
 ];
 
@@ -70,6 +74,7 @@ onMounted(async () => {
         :key="list.id"
         :name="list.name"
         :items="list.items.value"
+        :info="list.info"
       />
     </div>
   </main>

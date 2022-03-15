@@ -11,6 +11,11 @@ defineProps({
     type: Object,
     required: true,
   },
+
+  info: {
+    type: String,
+    required: true,
+  },
 });
 </script>
 
@@ -23,6 +28,7 @@ defineProps({
         v-for="item in items.results"
         :key="item.id"
         :item="item"
+        :info="info"
       />
     </div>
   </section>

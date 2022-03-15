@@ -4,6 +4,11 @@ defineProps({
     type: Object,
     required: true,
   },
+
+  info: {
+    type: String,
+    required: true,
+  },
 });
 
 function convertToDecimal(rating) {
@@ -39,8 +44,25 @@ function getYear(date) {
         {{ item.title }}
       </p>
   
-      <p class="text-sm">
-        {{ getYear(item.release_date) }}
+      <p
+        v-if="info == 'genre'"
+        class="text-sm"
+      >
+        {{ findGenre(item.genre_ids[0]) }}
+      </p>
+  
+      <p
+        v-if="info == 'release_date'"
+        class="text-sm"
+      >
+        {{ formatDate(item.release_date) }}
+      </p>
+
+      <p
+        v-if="info == 'vote_count'"
+        class="text-sm"
+      >
+        {{ item.vote_count }} votes
       </p>
     </div>
   </div>
