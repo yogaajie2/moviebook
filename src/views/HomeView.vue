@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, provide, onMounted } from 'vue';
 import axios from 'axios';
 import ItemList from '../components/ItemList.vue';
 
