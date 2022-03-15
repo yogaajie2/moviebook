@@ -25,7 +25,7 @@ const lists = [
 
   {
     id: 3,
-    name: 'Upcoming',
+    name: 'Coming Soon',
     items: ref({}),
     info: 'release_date'
   },
