@@ -4,6 +4,9 @@ import axios from 'axios';
 import ItemList from '../components/ItemList.vue';
 
 const API_KEY = "70d100dc02aa86f434714200877bff47";
+const genres = ref({});
+
+provide("genres", genres);
 
 const lists = [
   {
@@ -36,6 +39,13 @@ const lists = [
 ];
 
 onMounted(async () => {
+  await axios
+    // Genres
+    .get("https://api.themoviedb.org/3/genre/movie/list?api_key=" + API_KEY + "&language=en-US")
+    .then(response => {
+      genres.value = response.data.genres;
+    });
+
   await axios
     // Now Playing
     .get("https://api.themoviedb.org/3/movie/now_playing?api_key=" + API_KEY + "&language=en-US&page=1&region=ID")

@@ -13,6 +13,8 @@ defineProps({
   },
 });
 
+const genres = inject("genres");
+
 function convertToDecimal(rating) {
   return Number.isInteger(rating) ? rating + ".0" : rating;
 }
