@@ -1,5 +1,9 @@
 # moviebook
 
+## Live Site
+
+Click [here](https://md-moviebook.netlify.app/) to visit the generated static site.
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
